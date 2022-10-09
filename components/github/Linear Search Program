@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+void ArrInput(int *arr,int n){
+    int i;
+    for(i=0;i<=n-1; i++){
+        printf("enter arr[%d]",i);
+        scanf("%d",&arr[i]);
+    }
+    }
+void ArrOutput(int *arr,int n){
+    int i;
+    for(i=0;i<=n-1; i++){
+        printf(" arr[%d]=%d",i,arr[i]);
+    }
+    }
+int lsearch(int *arr,int n,int temp){
+    
+    int i,f=0 ;
+    printf("\nenter no u want to search");
+    scanf("%d",&temp);
+    
+    for (i=0;i<n;i++){
+        
+    if(arr[i] == temp){
+    printf("\n no is present at %d",i);
+    f=1;
+    }
+    else{
+        continue;
+    }
+    if(f==0){
+        printf("element not found");
+    }
+}
+ return 0; 
+}
+void main()
+{
+    int *a ,no,T;
+    printf("enter a no of elements you want to enter\n");
+    scanf("%d",&no);
+    ArrInput(a,no);
+    ArrOutput(a,no);
+    lsearch(a,no,T);
+}
